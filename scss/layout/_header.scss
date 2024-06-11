@@ -2,12 +2,14 @@ $color-negro: #1f2532;
 
 
 header{
-    background-color: #7b8075;
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #c0ccb1;
     align-items: center;
     padding: 15px;
+    background: rgb(182,182,194);
+    background: linear-gradient(90deg, rgba(182, 182, 194,1) 31%, rgba(46, 46, 56, 1) 60%);
+
 }
 
 header img{

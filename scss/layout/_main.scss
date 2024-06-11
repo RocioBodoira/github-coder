@@ -10,7 +10,27 @@ main h1{
     margin-left: 430px;
     margin-right: 100px;
     margin-top: 70px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+
+    transition: 2s;
+
+    &:hover{
+        transform: scale(0.2);
+    } 
+}
+
+@keyframes cambiarColor {
+
+    0%{
+       color: grey; 
+    }
+    50%{
+        color: white;
+    }
+    100%{
+        color: black;
+
+    }
 }
 
 main em p{
@@ -18,5 +38,11 @@ main em p{
     margin-left: 360px;
     margin-right: 80px;
     margin-bottom: 50px;
+
+    animation-name: cambiarColor;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-delay: 6s;
 
 }

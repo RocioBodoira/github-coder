@@ -8,9 +8,36 @@ a{
 
 }
 
+@keyframes girarElemento {
+    0%{
+        transform: rotate(25deg);
+    }
+    
+    50%{
+        transform: rotate(160deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 .icono-wpp{
     position:fixed;
     right:30px;
     bottom: 30px;
     width: 60px;
+    transition: 2s;
+
+    animation-name: girarElemento;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+
+
+    &:hover {
+        transform: rotate(360deg);
+
+    }
+
 }
