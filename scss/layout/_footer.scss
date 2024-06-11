@@ -1,0 +1,35 @@
+.grid-container-2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 60px);
+    row-gap: 1px ;
+    column-gap: 50px;
+}
+.grid.dir{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.grid-img{
+    align-items: center;
+    margin-left: 120px;
+}
+
+.grid-redes{
+    margin-left: 225px;
+    margin-right: 10px;
+    margin-top: 20px;
+    align-items:flex-end;
+}
+.icono-ig{
+    width: 45px;
+}
+
+.icono-fb{
+    width:45px;
+}
+
+.imagen-es{
+    width: 170px;
+}

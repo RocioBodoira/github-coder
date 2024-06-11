@@ -1,0 +1,41 @@
+$color-negro: #1f2532;
+
+
+header{
+    background-color: #7b8075;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #c0ccb1;
+    align-items: center;
+    padding: 15px;
+}
+
+header img{
+    width: 120px;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    
+}
+header nav ul li{
+    margin: 5px;
+    color: $color-negro;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+
+}
+header div img{
+    width:30px;
+}
+
+.icono-buscador{
+    margin-right: 10px;
+    margin-left: 30px;
+}

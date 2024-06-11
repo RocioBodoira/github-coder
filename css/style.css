@@ -1,172 +1,207 @@
-header{
-    background-color: #7b8075;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #c0ccb1;
-    align-items: center;
-    padding: 15px;
-}
-header img{
-    width: 120px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-header nav ul{
-    list-style-type: none;
-    display: flex;
-    
-}
-header nav ul li{
-    margin: 5px;
-    color: #1f2532;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+header {
+  background-color: #7b8075;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #c0ccb1;
+  align-items: center;
+  padding: 15px;
 }
 
-header div{
-    display: flex;
-    align-items: center;
-
-}
-header div img{
-    width:30px;
+header img {
+  width: 120px;
 }
 
-.icono-buscador{
-    margin-right: 10px;
-    margin-left: 30px;
+header nav ul {
+  list-style-type: none;
+  display: flex;
 }
 
-main h1{
-    font-size: 25px;
-    color:#1f2532;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #c0ccb1;
-    text-align: center;
-    padding: 25px 70px 25px 70px;
-    display: inline-block;
-    align-items: center;
-    margin-left: 120px;
-    margin-right: 120px;
-    margin-top: 70px;
-    margin-bottom: 15px
+header nav ul li {
+  margin: 5px;
+  color: #1f2532;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
 }
 
-main em p{
-    align-items: center;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 50px;
-
+header div {
+  display: flex;
+  align-items: center;
 }
 
-.grid-container{
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    grid-template-rows: repeat(2, 250px);
-
-    row-gap: 1px ;
-    column-gap: 25px;
+header div img {
+  width: 30px;
 }
 
-.grid-item-1{
-    align-items: center;
-    height: 200px;
-    width: 100px;
-    margin: 20px 20px 5px 40px;
-}
-.grid-item-2{
-    align-items: center;
-    width: 100px;
-    margin: 20px 20px 5px;
-}
-.grid-item-3{
-    align-items: center;
-    width: 100px;
-    margin: 20px 20px 5px;
-}
-.grid-item-4{
-    font-size:16px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 1px 20px 20px 35px;
-    align-items: center;
-}
-.grid-item-5{
-    font-size:16px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 1px 20px 20px;
-    align-items: center;
-}
-.grid-item-6{
-    font-size:16px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 1px 20px 20px;
-    align-items: center;
+.icono-buscador {
+  margin-right: 10px;
+  margin-left: 30px;
 }
 
-
-a{
-    text-decoration:dotted;
-    color: #1f2532;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-
-}
- .maps{
-    margin-top:80px;
-    margin-right: 60px;
-    margin-bottom: 80px;
-    margin-left: 100px;
-    align-items: center;
- }
-.contacto-1{
-    font-family: Arial, Helvetica, sans-serif;
-}
-.icono-wpp{
-    position:fixed;
-    right:30px;
-    bottom: 30px;
-    width: 60px;
+main h1 {
+  font-size: 25px;
+  color: #1f2532;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #c0ccb1;
+  text-align: center;
+  padding: 25px 70px 25px 70px;
+  display: inline-block;
+  align-items: center;
+  margin-left: 430px;
+  margin-right: 100px;
+  margin-top: 70px;
+  margin-bottom: 15px;
 }
 
-.grid-container-2{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 60px);
-    row-gap: 1px ;
-    column-gap: 50px;
-}
-.grid.dir{
-    margin-left: 15px;
-    margin-bottom: 5px;
-    align-items: center;
+main em p {
+  align-items: center;
+  margin-left: 360px;
+  margin-right: 80px;
+  margin-bottom: 50px;
 }
 
-.grid-img{
-    align-items: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  row-gap: 1px;
+  column-gap: 25px;
 }
 
-.grid-redes{
-    margin-left: 60px;
-    align-items:flex-end;
-}
-.icono-ig{
-    width: 45px;
-}
-
-.icono-fb{
-    width:45px;
-}
-
-.imagen-es{
-    width: 170px;
+.grid-item-1 {
+  align-items: center;
+  height: 200px;
+  width: 100px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  margin-left: 160px;
+  gap: 5px;
 }
 
-@media (max-widht:320px) {
-    header nav ul li{
-        display: none;
-    }
+.grid-item-2 {
+  align-items: center;
+  width: 100px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  margin-left: 120px;
+  gap: 5px;
 }
+
+.grid-item-3 {
+  align-items: center;
+  width: 100px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  margin-left: 100px;
+  gap: 5px;
+}
+
+.grid-item-4 {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1px 20px 20px 35px;
+  align-items: center;
+}
+
+.grid-item-5 {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1px 20px 20px;
+  align-items: center;
+}
+
+.grid-item-6 {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1px 35px 20px;
+  align-items: center;
+}
+
+.maps {
+  margin-top: 40px;
+  margin-right: 60px;
+  margin-bottom: 80px;
+  margin-left: 400px;
+  align-items: center;
+}
+
+.contacto-1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 60px);
+  row-gap: 1px;
+  column-gap: 50px;
+}
+
+.grid.dir {
+  margin-left: 15px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.grid-img {
+  align-items: center;
+  margin-left: 120px;
+}
+
+.grid-redes {
+  margin-left: 225px;
+  margin-right: 10px;
+  margin-top: 20px;
+  align-items: flex-end;
+}
+
+.icono-ig {
+  width: 45px;
+}
+
+.icono-fb {
+  width: 45px;
+}
+
+.imagen-es {
+  width: 170px;
+}
+
+a {
+  text-decoration: dotted;
+  color: #1f2532;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+.icono-wpp {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 60px;
+}
+
+@media (max-widht: 320px) {
+  header nav ul li {
+    display: none;
+  }
+}
+.boton {
+  background-color: grey;
+  padding: 15px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
