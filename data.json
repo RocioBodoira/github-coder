@@ -1,0 +1,14 @@
+[
+    {
+        "material": "hierro",
+        "precioPorKg": 5
+    },
+    {
+        "material": "aluminio",
+        "precioPorKg": 10
+    },
+    {
+        "material": "cobre",
+        "precioPorKg": 15
+    }
+]

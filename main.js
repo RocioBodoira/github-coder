@@ -1,89 +1,54 @@
-// Constantes de precios por kg
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('data.json')
+         .then(response =>
+    response.json())
+         .then(materiales => {
+        
+        inicializarSimulador(materiales);
+         })
+         .catch(error =>
+    console.error('Error al cargar los datos de materiales:', error));
+         });
 
-const precio_hierro = 45; // Precio por kg de aluminio
-
-const precio_aluminio = 30; // Precio por kg de hierro
-
-const precio_cobre = 10; // Precio por kg de cobre
-
-// Variables para almacenar la selección del cliente
-
-let tipoMetal;
-
-let pesoPieza;
-
-let cantidadPiezas;
-
-// Array de metales disponibles
-
-const metales = ["Hierro", "Aluminio", "Cobre"];
-
-// Función para seleccionar el tipo de metal
-
-function seleccionarMetal () {
-    let seleccion =
-    prompt("Selecciona el tipo de metal (1: Hierro, 2: Aluminio, 3: Cobre):");
-          switch (seleccion){
-            case "1":
-                tipoMetal = metales[0];
-                return precio_hierro;
-            case "2":
-                tipoMetal = metales[1];
-                return precio_aluminio;
-            case "3":
-                tipoMetal = metales[2];
-                return precio_cobre;
-            default: 
-                 alert("Selección inválida, por favor intentá de nuevo.");
-                 return
-            seleccionarMetal();
-          }
-}
-
-// Función para ingresar el peso de la pieza
-
-function ingresarPesoPieza () {
-    let peso =
-parseFloat(prompt("Ingresá el peso de la pieza en kg:"));
-    if (!isNaN(peso) && peso > 0) {
-        pesoPieza = peso;
-    }else{
-        alert("Peso inválido, por favor intentá de nuevo.");
-        ingresarPesoPieza();
-    }
-}
-
-// Funciones para ingresar la cantidad de piezas
-
-function ingresarCantidadPiezas () {
-    let cantidad =
-    parseInt(prompt("Ingresá la cantidad de piezas:"));
-    if (!isNaN(cantidad) && cantidad > 0) {
-        cantidadPiezas = cantidad; 
-    }else{
-        alert("Cantidad inválida, por favor intentá de nuevo.");
-        ingresarCantidadPiezas();
-    }
-}
-
-// Función para calcular el costo total
 function
-calcularCostoTotal(precioPorKg) {
-    let costoMaterial = precioPorKg
-    * pesoPieza * cantidadPiezas;
-    alert('El costo total de la cotización es: $$ {costoMaterial.toFixed(2)}');
-    return costoMaterial;
+inicializarSimulador(materiales) {
+    const selectMaterial = document.getElementById('material');
+    materiales.forEach(material => { const option = document.createElement('option');
+        option.value = material.material;
+        option.textContent = material.material;
+    
+    selectMaterial.appendChild(option);
+    });
+
+    const formulario = document.getElementById('formulario-costo');
+
+    formulario.addEventListener('submit', (evento) => {
+        evento.preventDefault();
+
+        const materialSeleccionado = document.getElementById('material').value;
+
+        const peso = parseFloat(document.getElementById('peso').value);
+
+        const material = materiales.find(m => m.material === materialSeleccionado);
+        
+        const precioPorKg = material ? material.precioPorKg : 0;
+
+        const costo = peso * precioPorKg;
+        mostrarResultado(costo);
+    }); 
 }
 
-let precioPorKg =
-seleccionarMetal ();
-ingresarPesoPieza ();
-ingresarCantidadPiezas ();
-calcularCostoTotal (precioPorKg);
+function mostrarResultado(costo) {
+    const resultadoDiv = document.getElementById('resultado');
 
-if (confirm("¿Querés realizar otra cotización?")) {
-    location.reload ();
-} else {
-    alert("Gracias por utilizar nuestro simulador de cotizaciones.");
+    resultadoDiv.textContent = `El costo estimado es: AR $ {costo.toFixed(2)}`;
 }
+
+function
+guardarEnLocalStorage(material, peso, costo) {
+    const datos = { material, peso, costo };
+
+localStorage.setItem('ultimoCalculo', JSON.stringify(datos));
+}
+
 

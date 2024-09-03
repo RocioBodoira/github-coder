@@ -52,8 +52,30 @@
         </em>
     </section>
     <section>
-        <p> Simulador de Cotización </p>
-        <p> Este simulador permite a los clientes de nuestra empresa calcular el costo aproximado de la fundición de piezas de metalúrgica según el tipo de metal, peso y cantidad deseada.</p>
+        <h2> Calculadora de Costo de Piezas de Fundición </h2>
+        <form id="formulario-costo">
+            <label
+        for="material">Material:</label>
+            <select id="material">
+                <option
+        value="hierro">Hierro</option>
+                <option
+        value="aluminio">Aluminio</option>
+                <option
+        value="cobre">Cobre</option>
+        </select>
+
+        <label for="peso">Peso (Kg):</label>
+        <input type="number" id="peso" required>
+        <button
+        type="submit">Calcular costo</button>
+        </form>
+
+        <div id="resultado"></div>
+        <script src="main.js"></script>
+    </section>
+
+         
 
     <section id="productos" class="productos animate__animated animate__backInLeft"> <p>PRODUCTOS</p></section>
 
@@ -84,7 +106,7 @@
     
 
     <section id="contacto" class="contacto-1">
-        <strong><h2>CONTACTANOS</h2></strong>
+        <strong><h3>CONTACTANOS</h3></strong>
         <p>WhatsApp: 3562-513375</p>
         <p>Teléfono: 3562-403362</p>
         <p>E-mail: metalwarmorteros@gmail.com</p>

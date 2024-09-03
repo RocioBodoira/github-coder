@@ -47,4 +47,20 @@ main em p{
 
 }
 
+main section h2 {
+    color: #333;
+}
 
+main section form {
+    margin-bottom: 20px;
+}
+
+main section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+main section input, select, button {
+    margin-bottom: 10px;
+    padding: 5px;
+}
