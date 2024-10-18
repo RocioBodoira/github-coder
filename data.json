@@ -1,14 +1,7 @@
-[
-    {
-        "material": "hierro",
-        "precioPorKg": 5
-    },
-    {
-        "material": "aluminio",
-        "precioPorKg": 10
-    },
-    {
-        "material": "cobre",
-        "precioPorKg": 15
-    }
-]
+{
+    "metales": [
+        { "nombre": "Aluminio", "precio": 10 },
+        { "nombre": "Cobre", "precio": 20 },
+        { "nombre": "Hierro", "precio": 5 }
+    ]
+}
